@@ -30,8 +30,6 @@
 ```
     git clone https://github.com/abukhadra/seen.git
     cd seen
-    git clone https://github.com/abukhadra/seen-compiler.git
-    git clone https://github.com/abukhadra/seen-editor.git
 ```
 Run the editor in English
 ```   
