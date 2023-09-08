@@ -1,0 +1,10 @@
+Cargo.lock
+.DS_Store
+.DS_Store?
+/target
+.vscode/settings.json
+/.vscode/
+/.git/
+/build
+/بنية
+/examples/**/build/

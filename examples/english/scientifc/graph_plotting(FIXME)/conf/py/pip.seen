@@ -1,0 +1,2 @@
+@exec
+install("local", py_path, pkg_id) ->  "{py_path} -m pip install {pkg_id} -t ."

@@ -1,0 +1,23 @@
+// FIXME: example not ready
+
+~Person { name() -> str }
+
+- Teacher {
+    name: str,
+    field: str
+}
+
+
+Teacher::(name: str, field: str): ^ -> .. 
+Teacher::field(): str -> .. 
+Teacher::~Person::name() : str -> ..
+
+
+()-> {
+    adam := Teacher { name: "Adam", field: "Biology" };
+    println(adam.name());
+    println(adam.field());
+    println(adam.~Person.field());
+    println(adam.Person.field());
+
+}

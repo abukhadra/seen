@@ -1,0 +1,7 @@
+()-> 
+    match 2 {
+        1 => println("number 1")
+        2 => println("number 2")
+        _ => println("unknown value")
+    }
+

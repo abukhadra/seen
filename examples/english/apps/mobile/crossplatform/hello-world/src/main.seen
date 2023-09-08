@@ -1,0 +1,9 @@
+@mobile
+() -> {
+    {
+        view : {
+            title: "hello world",
+            content: "hello world"
+        }
+    }
+}

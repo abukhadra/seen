@@ -1,0 +1,11 @@
+() -> {
+    { name: "bevy breakout" }
+}
+
+rs() -> {
+    {
+        deps: [
+            { id: "bevy",           v: "0.11",                         }, 
+        ]
+    }
+}

@@ -1,0 +1,7 @@
+() -> {
+    { name: "desktop_hello_world" }
+}
+
+// deps -> [
+// 
+// ]

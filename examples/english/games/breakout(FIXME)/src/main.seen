@@ -1,0 +1,109 @@
+// FIXME: this example is still not ready
+
+// original src :  “https://github.com/bevyengine/bevy/blob/main/examples/games/breakout.rs”
+// original src license: MIT:   “https://github.com/bevyengine/bevy/blob/main/LICENSE-MIT“
+
+@game_2d 
+import("rs", "bevy") 
+
+@game_2d 
+() -> ..    // auto implement, checks if minim requirements to implement a 2d game are provided by the user and uses defaults for the rest
+
+@Window win
+
+@Screen {
+    backgound: { color: (0.9, 0.9, 0.9) }
+}
+
+@on_keydown {
+    .Escape => win.close()   // this is equivalent to js () -> win.clone() 
+}
+
+@Sound
+ball_collision_sound :=  "sounds/breakout_collision.ogg" 
+
+@Component 
+paddle := Paddle{
+    size: (120, 20, 0),
+    move : "horizontal",
+    speed: 500,
+    color: (0.3, 0.3, 0.7)
+}
+
+Border {
+    thickness: float,
+    color: RGB,
+    pos: Pos
+}
+
+Border::{
+    (x,y) ->  {
+        thickness : 10.0,
+        color : (0.8, 0.8, 0.8)
+        pos: (x,y)
+    }
+}
+
+Side {  Border }
+Floor { Border }
+Ceiling { Border }
+
+@Component left_wall := Side(-450,0)
+@Component right_wall := Side(450,0)
+@Component floor := Floor((0,-300))
+@Component ceiling := Ceiling((0,300))
+
+@Component
+ball := Ball {
+    shape: "circle",
+    pos: (0.0, -50.0, 1.0),
+    size: (30.0, 30.0, 0.0),
+    speed: 400.0,
+    dir: (0.5, -0.5),
+    on: { collision:  ball_collision_sound.play() },
+    color : (1.0, 0.5, 0.5)
+}
+
+@Component
+brick := Brick {
+    color :(0.5, 0.5, 1.0)
+}
+
+@Scoreboard.Basic
+{
+    score: {
+        color: (0.5, 0.5, 1.0),
+        padding: 5.0
+    },
+    color : (1.0, 0.5, 0.5),
+    font: { size: 40 }
+
+}
+
+@Area
+bricks_area := BricksArea {..}   // infer from gaps and other constraints from other objects
+
+bricks :=  bricks_area.tile(brick)
+
+@Collision {
+    (.Ball(ball), .Border) => ball.bounce(),  // default for bounce is to go on the other direction, we can override
+    (.Ball(ball), .Paddle) => ball.bounce() ,
+    (.Ball, .Brick(brick)) => {
+        brick.remove() 
+        score += 1
+    }
+}
+
+@Padding {
+    (.Ball, *.Border) => 10,
+}
+
+@Gap {
+    (.Paddle, .BricksArea) => 270.0,
+    (.Brick, .Brick) => 5.0,
+    (.Ball, .Floor) => 60,
+    (.BricksArea, .Ceiling) => 20.0,
+    (.BricksArea, .Side) => 20.0,
+}
+
+// TODO: auto generate colliders, loop, camera , apply velocity, calculate arena , bricks filling area , paddle movement

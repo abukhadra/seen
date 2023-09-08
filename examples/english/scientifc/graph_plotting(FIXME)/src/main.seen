@@ -1,0 +1,21 @@
+// FIXME : This example still doesn't work
+
+@plot
+()-> {
+    x := [0 -- 100 | 0.02] 
+    
+    {
+       data: {
+            size: (5, 2.7),
+                plot: [
+                    (x,      x,        "linear"),
+                    (x,      x.^2,     "quadratic"),
+                    (x,      x.^3,     "cubic")
+                ],
+                x_label: "x label",
+                y_label: "y label",
+                title: "Simple Plot",
+                legend: true
+        } 
+    }
+}

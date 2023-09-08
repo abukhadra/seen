@@ -1,0 +1,7 @@
+()-> 
+    println(f(5)!)
+
+f(x: int): Res<str, str> ->
+    Ok("1")
+
+

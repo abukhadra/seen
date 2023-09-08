@@ -1,0 +1,13 @@
+()-> {
+    // let x = 12
+    x := 12
+    println(fib(x)) 
+}
+
+
+fib(x: int): int -> 
+    match x {
+        0 => 0
+        1 => 1
+        n => fib(n - 1) + fib(n - 2) 
+    }
