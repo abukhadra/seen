@@ -33,11 +33,11 @@
 ```
 Run the editor in English
 ```   
-    cargo run --manifest-path ./seen-editor/src-tauri/Cargo.toml -- editor	
+    cargo run -- editor	
 ```
 Run the editor in Arabic
 ```
-    cargo run --manifest-path ./seen-editor/src-tauri/Cargo.toml -- editor --ar	
+    cargo run -- editor --ar	
 ```
 - To create new projects , go to File -> New Project 
 - Or try to run the examples provided:   File -> Open Project
