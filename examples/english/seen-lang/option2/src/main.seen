@@ -1,7 +1,0 @@
-()-> 
-    println(f(1)!)
-
-f(x: int): str? ->
-    Some("34")
-
-

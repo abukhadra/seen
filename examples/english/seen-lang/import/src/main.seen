@@ -1,8 +1,0 @@
-seen_mod := import("hello2");
-rs_mod := import("hello.rs");
-
-
-() -> {
-    seen_mod.hello();
-    rs_mod.hello();
-}

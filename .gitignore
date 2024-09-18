@@ -5,6 +5,7 @@ Cargo.lock
 .vscode/settings.json
 /.vscode/
 /.git/
-/build
-/بنية
-/examples/**/build/
+/__build
+/__بنية
+/examples/**/__build/
+/examples/**/__بنية/
