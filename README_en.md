@@ -1,4 +1,4 @@
-[![en](https://raw.githubusercontent.com/abukhadra/Seen/master/images/language.svg)عربي](https://github.com/abukhadra/Seen/blob/master/README.md)
+[![en](https://raw.githubusercontent.com/abukhadra/Seen/master/readme/language.svg)عربي](https://github.com/abukhadra/Seen/blob/master/README.md)
 
 # The Seen programming language SDK
 

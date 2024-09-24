@@ -5,15 +5,15 @@ export const nesting = `type Engine (
 type Car (
   year   : int
   model  :  str
-  engine : Engine 
-)
+) { Engine }
 
 fn main {
-  car := Car (
-      year : 2006
-      model : 'honda'
-      engine : Engine(size : 2.5)
-  ) 
+
+  let car = Car ( 
+    year : 2006
+    model : 'honda'   
+  ) { Engine(size : 2.5) }
+
   car |> pprint
 }
 `
