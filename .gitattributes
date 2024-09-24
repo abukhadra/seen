@@ -1,2 +1,2 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+#workaround to not include source in the releaes : https://github.com/orgs/community/discussions/6003#discussioncomment-10480237
+* export-ignore 
