@@ -9,3 +9,8 @@ Cargo.lock
 /__بنية
 /examples/**/__build/
 /examples/**/__بنية/
+
+
+dist/
+package-lock.json
+/node_modules/
