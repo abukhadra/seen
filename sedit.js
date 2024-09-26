@@ -322,6 +322,7 @@ async function read_url(url) {
                 const iframe_win = iframe.contentWindow || iframe;                
                 // iframe_win.opts = opts ;
                 iframe.srcdoc = ` ${code.replace("'%SEEN_EDITOR__OPTS%'", `${JSON.stringify(opts)}`)} `;
+                return iframe
               }
 
               export function SeenCode(id, parent, opts) { 
@@ -647,5 +648,6 @@ async function read_url(url) {
                 const iframe_win = iframe.contentWindow || iframe;                
                 // iframe_win.opts = opts ;
                 iframe.srcdoc = ` ${code.replace("'%SEEN_EDITOR__OPTS%'", `${JSON.stringify(opts)}`)} `;
+                return iframe
               }                
               
