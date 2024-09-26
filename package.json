@@ -2,6 +2,7 @@
     "name": "seen",
     "version": "0.1.2",
     "description": "seen tools and examples",
+    "type": "module",
     "keywords" : [
       "seen" , 
       "programming language", 
@@ -22,15 +23,17 @@
       "url": "git+https://github.com/abukhadra/seen.git"
     },  
     "scripts": {
-      "build": "npm run clean && npm install && vite build && mv ./dist/*.js && npm run copy-files",
+      "preinstall" : "npm run clean",
+      "prepare": "vite build",
+      "postprepare" : "npm run copy-files",
       "copy-files" : "cp ./node_modules/seen-compiler/scompiler.js . && cp ./node_modules/seen-editor/seditor.js . && cp ./node_modules/seen-playground/splay.js . ",
-      "clean": "rm -rf ./dist && rm -rf ./scompiler.js && rm -rf ./seditor.js && rm -rf ./splay.js && rm -rf ./node_modules"
+      "clean": "rm -rf ./dist && rm -rf ./scompiler.js && rm -rf ./seditor.js && rm -rf ./splay.js && rm -rf ./node_modules  && rm -rf ./package-lock.json"
     },
 
     "dependencies": {
-        "seen-compiler" : "https://github.com/abukhadra/seen-compiler",
-        "seen-editor" : "https://github.com/abukhadra/seen-editor",
-        "seen-playground" : "https://github.com/abukhadra/seen-playground"
+        "seen-compiler" : "github:abukhadra/seen-compiler",
+        "seen-editor" : "github:abukhadra/seen-editor",
+        "seen-playground" : "github:abukhadra/seen-playground"
     },
 
     "author": "Mustafa Abukhadra",
