@@ -152,7 +152,7 @@ export const رسم_صفحة_قرآن =
   }
 }
 
-حاشية :: (
+ثابت حاشية = (
       حفص_عثماني                 : «UthmanicHafs» 
       عنوان_خط_حفص_عثماني_نسخة٢٢ : «https://raw.githubusercontent.com/abukhadra/quran-sn/9e0ee248c4a659fd097f01a90577b85c1cbd2fbf/font/UthmanicHafs_V22.ttf» 
       اطار_صفحة_القرآن           : «https://raw.githubusercontent.com/abukhadra/quran-sn/9e0ee248c4a659fd097f01a90577b85c1cbd2fbf/image/quran_frame.png»
