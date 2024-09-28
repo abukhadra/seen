@@ -1,15 +1,15 @@
 <div align="center">
-<img width="75%" alt="image" src="readme/light-logo.svg">
-[Website]&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[الموقع]
-</div>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="readme/dark-banner.svg">
+    <source media="(prefers-color-scheme: light)" srcset="readme/light-banner.svg">
+    <img alt="The Seen Programming Language - لفة البرمجة س" src="readme/light-banner.svg" width="50%">
+  </picture>
 
+  [Website] &nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [الموقع]
+</div>
 
 [Website]: https://seenlang.org/
 [الموقع]: https://seenlang.org/ar
-<!-- [Getting Started]: https://www.rust-lang.org/learn/get-started
-[Learn]: https://www.rust-lang.org/learn
-[Documentation]: https://www.rust-lang.org/learn#learn-use
-[Contributing]: CONTRIBUTING.md -->
 
 ## objectives
 - Bilingual programming language ( Arabic and English ).
