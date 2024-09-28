@@ -1,20 +1,4 @@
-<div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center">
-    <div width='100%'>
-        <a href="https://seenlang.org" style="display: flex; flex-direction: column; font-size:2rem;">
-            <div>Seen</div>
-            <div>Programming</div>
-            <div>Language</div>
-        </a>
-    </div>
-    <img width="30%" alt="image" src="assets/light-logo.svg">     
-    <div width='100%'>
-        <a href="https://seenlang.org/ar" style="display: flex; flex-direction: column; font-size:2rem;">
-            <div>لغة</div>
-            <div>البرمجة</div>
-            <div>س</div>
-        </a>
-    </div>
-</div>
+<img width="50%" alt="image" src="readme/light-logo.svg">     
 
 ## objectives
 - Bilingual programming language ( Arabic and English ).
