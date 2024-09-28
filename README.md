@@ -8,37 +8,48 @@
   [Website] &nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [الموقع]
 </div>
 
+pronunciation sīn , like "Seen" is the twelfth letter of the Arabic alphabet,  
+the letter س is used in math to indicate unknown values and variables, the equivalent of "x" in English.
+
 [Website]: https://seenlang.org/
 [الموقع]: https://seenlang.org/ar
 
 ## objectives
-- Bilingual programming language ( Arabic and English ).
-- Code Generation: transpile to readable rust, javascript, html, css , python and more as needed.
-- Multiplatform.
-- Provide tools to work with Arabic 
-- tranlsation between Arabic and English.
-- Development tools , including an editor, cli.
-
+- Bilingual programming language ( Arabic and English )
+- Code Generation: transpile to readable rust, javascript, html, css , python and more as needed. 
+  <br>&nbsp;&nbsp;when the project matures , generating lower level code such as wasm and llvm might be an option.
+- Multiplatform, targeting web, mobile and desktop
+- Provide tools to work with Arabic
+- Easily switch between Arabic and English
+- Development tools, including an editor and a cli
 
 ## Status 
-The project is still in its very early stages and needs lots of work before it becomes fully functional. 
-The tools are good enough to run the demos provided in the website.
-
+The project is still in its very early stages and needs lots of work before it becomes fully functional.<br>
+The tools are good enough to run the examples provided in the website.
+Current focus:
+- Compiler
+  - importing JS files
+  - Calling Seen from JS
+  - semantic analyzer
+  - Complete the HTML/CSS/JS generation 
+- Editor
+  - Project Explorer / Multifiles
+  - Project Building
+  - Package Management
+  - Desktop version
+- Expirements 
+  - Generating Reactive Native 
+  - Calling Python,
+  - Generating Rust
+ 
 ## Documentation
-The following documents will be uploaded soon:
+The following will be provided soon in both English and Arabic and published on the official website:
 - Tutorial
 - The Langauge Design
 - Inspirations and Credits 
 - Open and Known Issues
 - Legal Docs
 - Todo
-- documentation will be provided in both English and Arabic
-
-## The Language
-### Name **س** 
-( pronunciation sīn , like "Seen" ) is the twelfth letter of the Arabic alphabet,  the letter س is used in math to indicate unknown values and variables, the equivalent of "x" in English.
- 
-**Extension** : Files must have the extension : **.sn** or the Arabic extension **.س**
 
 ## License
 **MIT license**.  
