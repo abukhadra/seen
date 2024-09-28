@@ -1,19 +1,15 @@
 <div style="display: flex; flex-direction: row; justify-content: center; align-items: center">
-    <div>
-        <a href="https://seenlang.org" style="display:flex; flex-direction:column; font-size:2rem;  justify-content: center; align-items: center">
-            Seen<br>
-            Programming<br>
-            Language
-        </a> 
-    </div>
+    <a href="https://seenlang.org" style="display:inline-block; font-size:2rem;">
+        Seen<br>
+        Programming<br>
+        Language
+    </a> 
     <img width="30%" alt="image" src="assets/light-logo.svg"> 
-    <div>
-        <a href="https://seenlang.org/ar" style="display:flex; flex-direction:column; font-size:2rem;  justify-content: center; align-items: center">
-            لغة<br>
-            البرمجة<br>
-            س
-        </a>
-    </div> 
+    <a href="https://seenlang.org/ar" style="display:inline-block; font-size:2rem;">
+        لغة<br>
+        البرمجة<br>
+        س
+    </a>
 </div>
 
 ## objectives
