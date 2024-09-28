@@ -4,8 +4,6 @@
 [Website]  |  [الموقع]
 </div>
 
-This is the main source code repository for [Rust]. It contains the compiler,
-standard library, and documentation.
 
 [Website]: https://seenlang.org/
 [الموقع]: https://seenlang.org/ar
