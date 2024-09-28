@@ -1,4 +1,18 @@
-<img width="50%" alt="image" src="readme/light-logo.svg">     
+<div align="center">
+<img width="75%" alt="image" src="readme/light-logo.svg">     
+
+[Website]  |  [الموقع]
+</div>
+
+This is the main source code repository for [Rust]. It contains the compiler,
+standard library, and documentation.
+
+[Website]: https://seenlang.org/
+[الموقع]: https://seenlang.org/ar
+<!-- [Getting Started]: https://www.rust-lang.org/learn/get-started
+[Learn]: https://www.rust-lang.org/learn
+[Documentation]: https://www.rust-lang.org/learn#learn-use
+[Contributing]: CONTRIBUTING.md -->
 
 ## objectives
 - Bilingual programming language ( Arabic and English ).
