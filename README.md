@@ -1,6 +1,5 @@
 <div align="center">
-<img width="75%" alt="image" src="readme/light-logo.svg">     
-
+<img width="75%" alt="image" src="readme/light-logo.svg">
 [Website]&nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp;[الموقع]
 </div>
 
