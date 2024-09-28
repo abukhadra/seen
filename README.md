@@ -29,13 +29,18 @@ Seen tools are developed in multiple repositories, the final build for each tool
 - Solve Arabic specific concerns, such as lack of Arabic language support.
 
 ## Approach
-To make the project immediately useful, the langauge will be trasnpiled to different underlying langauges to accomplish specific tasks, 
+To make the project immediately useful and provide value other than being another programming langauge,<br> 
+the langauge will be trasnpiled to different underlying langauges to benifit from th ecosystems and developments<br> 
+already accomplished by these technologies<br><br>
+Following is a list of targets the compiler will officially support:
 - HTML/CSS/JS to provide tools that can run in the browser
 - React Native for mobile development
-- Rust for low level 
-- others as needed
+- Rust otherwise
+- Others if rust is not an option.
 
 When the project matures enough, compiling to lower level code such as wasm and llvm might be an option.
+
+
 
 ## Status 
 The project is still in its very early stages and needs lots of work before it becomes fully functional.<br>
