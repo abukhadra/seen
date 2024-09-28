@@ -1,14 +1,14 @@
-<div style='display: flex; flex-direction: row; justify-content: center; align-items: center'>
-    <a href = 'https://seenlang.org' style='display: flex; flex-direction: column; font-size: 2rem;'>
-        <div>Seen</div> 
-        <div>Programming</div> 
-        <div>Language</div>
+<div style="display: flex; flex-direction: row; justify-content: center; align-items: center">
+    <a href = "https://seenlang.org" style="display: flex; flex-direction: column; font-size: 2rem;">
+        Seen<br>
+        Programming<br>
+        Language
     </a> 
     <img width="30%" alt="image" src="assets/light-logo.svg"> 
-    <a href = 'https://seenlang.org/ar' style='display: flex; flex-direction: column; font-size: 2rem;'>
-        <div>لغة</div>
-        <div>البرمجة</div>
-        <div>س</div>
+    <a href = "https://seenlang.org/ar" style="display: flex; flex-direction: column; font-size: 2rem;">
+        لغة<br>
+        البرمجة<br>
+        س
     </a> 
 </div>
 
