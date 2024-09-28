@@ -1,57 +1,25 @@
-[![en](https://raw.githubusercontent.com/abukhadra/Seen/master/readme/language.svg)عربي](https://github.com/abukhadra/Seen/blob/master/README.md)
+# The Seen programming language  $~~~~~$ - $~~~~~$ لغة البرمجة س
 
-# The Seen programming language SDK
-
-<img width="1600" alt="image" src="https://github.com/abukhadra/seen/assets/987908/ab49f38f-a0cc-414a-a679-a46d2b61a902">
+<div style='display: flex; flex-direction: row; justify-content: center, align-items: center'>                             
+    <u><a href='https://seenlang.org' style='font-size:3.2rem;'>English</a></u>
+    <img width="30%" alt="image" src="https://raw.githubusercontent.com/abukhadra/Seen/master/assets/light-logo.svg">  
+    <u><a href='https://seenlang.org/ar' style='font-size:3.2rem;'>عربي</a></u>
+</div>
 
 
 
 ## objectives
 - Bilingual programming language ( Arabic and English ).
-- Code Generation: transpile to readable Rust source files, html, css as needed.
+- Code Generation: transpile to readable rust, javascript, html, css , python and more as needed.
 - Multiplatform.
-- Provide tools to work with Arabic and also to translate between Arabic and English.
-- The Seen Editor
+- Provide tools to work with Arabic 
+- tranlsation between Arabic and English.
+- Development tools , including an editor, cli.
 
 
-## Building from source
-> **Note**
-> The project is still in early development, <br>
-> so far testing is only performed on  `macOS Ventura / Apple M1` 
-
-
-### Dependencies
-- Cargo : Seen transpiles to rust, you will need to install rust and cargo , follow the instructions in the following link:
-		https://doc.rust-lang.org/cargo/getting-started/installation.html 
-- Git: https://git-scm.com/book/en/v2/Getting-Started-Installing-Git
-
-### Steps
-- open a terminal and perform the following steps to clone and build the repository: 
-```
-    git clone https://github.com/abukhadra/seen.git
-    cd seen
-```
-Run the editor in English
-```   
-    cargo run -- editor	
-```
-Run the editor in Arabic
-```
-    cargo run -- editor --ar	
-```
-- To create new projects , go to File -> New Project 
-- Or try to run the examples provided:   File -> Open Project
-
-
-## Status
-Currently, the code in the repositories is capable of the following:
-- Launch the Seen editor. most editors do not support Right to left languages, a small editor is provided which can be launched in either Arabic or English. 
-- Running the samples provided in the examples directory.
-- Create new projects from templates
-  
+## Status 
 The project is still in its very early stages and needs lots of work before it becomes fully functional. 
-As of now, it is only tested on a Mac M1. 
-
+The tools are good enough to run the demos provided in the website.
 
 ## Documentation
 The following documents will be uploaded soon:
@@ -63,17 +31,18 @@ The following documents will be uploaded soon:
 - Todo
 - documentation will be provided in both English and Arabic
 
-
 ## The Language
 ### Name **س** 
 ( pronunciation sīn , like "Seen" ) is the twelfth letter of the Arabic alphabet,  the letter س is used in math to indicate unknown values and variables, the equivalent of "x" in English.
  
-**Extension** : Files must have the extension : **.seen** or the Arabic extension **.س**
+**Extension** : Files must have the extension : **.sn** or the Arabic extension **.س**
 
 ## License
 **MIT license**.  
 
 ## Related Repositories
 - [seen-compiler](https://github.com/abukhadra/seen-compiler)
+- [seen-gen-html](https://github.com/abukhadra/seen-gen-html)
+- [seen-gen-js](https://github.com/abukhadra/seen-gen-js)
 - [seen-editor](https://github.com/abukhadra/seen-editor)
-- [bootstrap-seen-compiler](https://github.com/abukhadra/bootstrap-seen-compiler)
+- [seen-playground](https://github.com/abukhadra/seen-playground)
