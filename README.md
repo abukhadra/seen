@@ -36,11 +36,9 @@ Following is a list of targets the compiler will officially support:
 - HTML/CSS/JS to provide tools that can run in the browser
 - React Native for mobile development
 - Rust otherwise
-- Others if rust is not an option.
+- Other Langauges if rust is not an option.
 
 When the project matures enough, compiling to lower level code such as wasm and llvm might be an option.
-
-
 
 ## Status 
 The project is still in its very early stages and needs lots of work before it becomes fully functional.<br>
