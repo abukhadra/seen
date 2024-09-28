@@ -1,6 +1,6 @@
 # The Seen programming language     -     لغة البرمجة س
 
-<div style='display: flex; flex-direction: row; justify-content: center, align-items: center'>                             
+<div style='display: flex; flex-direction: row; justify-content: center; align-items: center'>                             
     <u><a href='https://seenlang.org' style='font-size:3.2rem;'>English</a></u>
     <img width="30%" alt="image" src="assets/light-logo.svg">  
     <u><a href='https://seenlang.org/ar' style='font-size:3.2rem;'>عربي</a></u>
