@@ -51,7 +51,7 @@
     </a>
     <a xlink:href="https://seenlang.org/ar"> 
         <text x="230" y="45" font-size="40" fill='coral'>لغـــــــــــــــــــة</text>    
-        <text x="230" y="85" font-size="40" fill='coral'>البرمجـــــــــــة</text>    
+        <text x="229" y="85" font-size="40" fill='coral'>البرمجــــــــــــة</text>    
         <text x="305" y="125" font-size="40" fill='coral'>س</text>        
     </a>
 </svg>
