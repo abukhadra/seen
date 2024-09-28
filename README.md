@@ -7,9 +7,10 @@
 
   [Website] &nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [الموقع]
 </div>
-
-pronunciation sīn , like "Seen" is the twelfth letter of the Arabic alphabet,  
-the letter س is used in math to indicate unknown values and variables, the equivalent of "x" in English.
+<br>
+pronunciation sīn , like "Seen" is the twelfth letter of the Arabic alphabet,<br>  
+&nbsp;&nbsp;the letter س is used in math to indicate unknown values and variables <br>
+&nbsp;&nbsp;the equivalent of "x" in English.
 
 [Website]: https://seenlang.org/
 [الموقع]: https://seenlang.org/ar
@@ -25,7 +26,7 @@ the letter س is used in math to indicate unknown values and variables, the equi
 
 ## Status 
 The project is still in its very early stages and needs lots of work before it becomes fully functional.<br>
-The tools are good enough to run the examples provided in the website.
+The tools are good enough to run the examples provided in the website.<br><br>
 Current focus:
 - Compiler
   - importing JS files
