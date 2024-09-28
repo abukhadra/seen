@@ -1,4 +1,4 @@
-<div style="display: flex; flex-direction: row; justify-content: center; align-items: center">
+<div style="display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: center; align-items: center">
     <a href="https://seenlang.org" style="display: flex; flex-direction: column; font-size:2rem;">
         <div>Seen</div>
         <div>Programming</div>
