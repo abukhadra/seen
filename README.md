@@ -13,22 +13,29 @@
 </div>
 <br>
 
-pronunciation sīn , like "Seen" is the twelfth letter of the Arabic alphabet,<br>  
-&nbsp;&nbsp;the letter س is used in math to indicate unknown values and variables <br>
-&nbsp;&nbsp;the equivalent of "x" in English.
+pronunciation sīn , like "Seen" is the twelfth letter of the Arabic alphabet, the letter س is used in math to indicate <br>
+&nbsp;&nbsp;&nbsp;&nbsp;unknown values and variables the equivalent of "x" in English.
 
-Seen tools are developed in multiple repostiroy, the final build for each tool will be collected and uploaded here to centralize access
+Seen tools are developed in multiple repositories, the final build for each tool will be collected and uploaded here to centralize access
 
 ## objectives
 - Bilingual programming language ( Arabic and English )
-- Code Generation: transpile to readable rust, javascript, html, css , python and more as needed. 
-  <br>&nbsp;&nbsp;when the project matures , generating lower level code such as wasm and llvm might be an option.
+- Code Generation / transpilation
 - Multiplatform, targeting web, mobile and desktop
 - Provide Two solutions: 
   - Desktop version that can communicate with the Operating System.
   - Seen for web, works fully on the browser, 
 - Development tools, including an editor and a cli
 - Solve Arabic specific concerns, such as lack of Arabic language support.
+
+## Approach
+To make the project immediately useful, the langauge will be trasnpiled to different underlying langauges to accomplish specific tasks, 
+- HTML/CSS/JS to provide tools that can run in the browser
+- React Native for mobile development
+- Rust for low level 
+- others as needed
+
+When the project matures enough, compiling to lower level code such as wasm and llvm might be an option.
 
 ## Status 
 The project is still in its very early stages and needs lots of work before it becomes fully functional.<br>
@@ -40,7 +47,7 @@ Current focus:
   - semantic analyzer
   - Complete the HTML/CSS/JS generation 
 - Editor
-  - Project Explorer / Multifiles
+  - Project Explorer / Multi-files
   - Project Building
   - Package Management
   - Desktop version
