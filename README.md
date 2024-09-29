@@ -83,4 +83,4 @@ Examples and instructions for each tool are provided in their respective reposit
 - [seen-gen-js](https://github.com/abukhadra/seen-gen-js)
 - [seen-editor](https://github.com/abukhadra/seen-editor)
 - [seen-playground](https://github.com/abukhadra/seen-playground)
-
+- [seen-utils](https://github.com/abukhadra/seen-utils)
