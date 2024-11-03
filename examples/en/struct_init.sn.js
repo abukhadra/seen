@@ -1,8 +1,7 @@
 export const struct_init=
-`type Point(a : int, b : int)
+`struct Point { a : int, b : int }
   
 fn main { 
     let x = Point(3,3)
-    println(x.a)
-}
-`
+    println('Point.a = ' ++ x.a)
+}`

@@ -1,19 +1,33 @@
-export const nesting = `type Engine (
-    size : float
-)
-  
-type Car (
-  year   : int
-  model  :  str
-) { Engine }
+export const nesting = `struct Degree {
+    name          : str
+}
+
+struct Department {
+    name          : str
+    degrees       : [Degree]    
+}
+
+struct University {
+    name          : str
+    departments   : [Department]
+}  
 
 fn main {
-
-  let car = Car ( 
-    year : 2006
-    model : 'honda'   
-  ) { Engine(size : 2.5) }
-
-  car |> pprint
-}
-`
+    University( 'Seen University') . {
+        departments.add(
+            Department('Science') . {
+                degrees.add(
+                    Degree('Physics') 
+                    Degree('Biology') 
+                    Degree('Chemistry') 
+                )
+            }
+            Department('Engineering') . { 
+                degrees.add(
+                    Degree('Computer')
+                    Degree('Electrical')
+                )
+            }
+        )
+    }.pprint()
+}`

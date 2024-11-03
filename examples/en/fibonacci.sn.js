@@ -1,7 +1,7 @@
 export const fibonacci = 
 `fn main { 
     let x = 10
-    println('fibonacci %{x} = %{fib(x)}')
+    println('fibonacci(%{x}) = %{fib(x)}')
 }  
 
 fn fib(n) {
