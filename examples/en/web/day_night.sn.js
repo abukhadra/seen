@@ -1,14 +1,14 @@
 export const day_night = `use html
 
 fn main( container ) { 
-    page => {  preview( contaier )  }
+    page() => {  preview( contaier )  }
 }
 
 fn page {
-    html => {
-        head => {
-            style => {
-                select( tag(body) ,  tag(html) ) => { 
+    html() => {
+        head() => {
+            style() => {
+                select( tag(body) , tag(html) ) => { 
                     margin            : 0 
                     padding           : 0 
                 }
@@ -17,7 +17,7 @@ fn page {
                     box_sizing        : border_box 
                 }
 
-                select( body )=> {                     
+                select( body ) => {                     
                     height            : 100vh 
                     background_color  : none 
                     display           : flex 
@@ -36,7 +36,7 @@ fn page {
                     background_color  : lightskyblue 
                 }
 
-                select( id('state') )=> { 
+                select( id('state') ) => { 
                     webkit_user_select: none              -- Safari 
                     ms_user_select    : none              -- IE 10 and IE 11
                     user_select       : none  
@@ -85,7 +85,7 @@ fn page {
                 select(
                      id( 'sky' )
                          .id( 'outer' ) 
-                )=> { 
+                ) => { 
                     animation : ( 'sunset', 7s,  infinite )
                 }
 
@@ -93,7 +93,7 @@ fn page {
                     id('sky')
                         .id('state')
                             .id('night')
-                )=> { 
+                ) => { 
                     animation : ( 'night', 7s,  infinite )
                 }
 
@@ -101,7 +101,7 @@ fn page {
                     id('sky')
                         .id('outer')
                             .id('inner') 
-                )=> {
+                ) => {
                     animation : ( 'moonrise', 7s, infinite )
                 }
 
@@ -140,8 +140,8 @@ fn page {
                  }
             }
         }
-        body => {
-            div => {
+        body() => {
+            div() => {
                 div('sky') => {
                     div('state') => {
                         div('day')    => { text( 'Good Day'   ) }
@@ -157,7 +157,6 @@ fn page {
         }
     }
 }
-
 
 fn id    ( v: str ) { CSSPath.new( '#' ++ v )    }
 fn cl    ( v: str ) { CSSPath.new( '.' ++ v )    }
@@ -190,8 +189,8 @@ struct Border {
     border_style: BorderStyle 
 }
 
-struct Select             { paths : [ CSSPath ] , ...CSSProperties                  }
-struct KeyFrameOffset     { offset : num , ...CSSProperties                         }
+struct Select             { paths : [ CSSPath ] , (props) : CSSProperties           }
+struct KeyFrameOffset     { offset : num ,        (props) : CSSProperties           }
 struct KeyFrame           { id : str , offsets : [KeyFrameOffset]                   } 
 struct Body               { els: [HtmlElement]                                      } 
 struct Text               { v: str                                                  }
@@ -222,12 +221,10 @@ struct CSSProperties {
 }
 
 
-
 @ Html {
     [+] fn head { _head = .new() ; _head }
     [+] fn body { _body = .new() ; _body }
 }
-
 
 @ Head 
 [+] fn style { 
@@ -248,7 +245,6 @@ struct CSSProperties {
              return k  
         }
 }
-
 
 @ CSSPath {
     [+] fn id        ( v: str ) { append( '#' ++ v ) }
@@ -273,5 +269,4 @@ struct CSSProperties {
 @ Div {
     [+] fn cl    (name)     { classes ++ name }
     [+] fn text  (v)        { children ++ Text.new(v) }
-}
-`
+}`
