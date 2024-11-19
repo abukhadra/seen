@@ -1,31 +1,29 @@
 export const day_night = `use html
 
-fn main( container ) { 
-    page() => {  preview( contaier )  }
-}
+[+] main container = 
+	page => 
+		preview( contaier ) 
 
-fn page {
-    html() => {
-        head() => {
-            style() => {
-                select( tag(body) , tag(html) ) => { 
+:: (WebPage) 
+[+] page =
+    Webpage.html => 
+        head => 
+            style => 
+                select( tag(body) , tag(html) ) => 
                     margin            : 0 
                     padding           : 0 
-                }
 
-                select( tag('*') ) => { 
+                select( tag('*') ) => 
                     box_sizing        : border_box 
-                }
-
-                select( body ) => {                     
+                
+                select( body ) => 
                     height            : 100vh 
                     background_color  : none 
                     display           : flex 
                     justify_content   : center 
                     align_items       : center 
-                }
 
-                select( id(sky) ) => {  
+                select( id(sky) ) => 
                     width             : 11rem 
                     display           : flex 
                     justify_content   : end 
@@ -34,9 +32,8 @@ fn page {
                     padding           : 0.3rem 
                     border_radius     : 2rem 
                     background_color  : lightskyblue 
-                }
 
-                select( id('state') ) => { 
+                select( id('state') ) => 
                     webkit_user_select: none              -- Safari 
                     ms_user_select    : none              -- IE 10 and IE 11
                     user_select       : none  
@@ -45,158 +42,142 @@ fn page {
                     justify_content   : space_between 
                     margin            : 0.8rem 
                     width             : 9rem 
-                }
 
-                select( id('night') )  => {
+                select( id('night') )  => 
                     color             : lightskyblue 
-                }
 
-                select( cl('center') ) => {
+                select( cl('center') ) => 
                     justify_content   : center 
                     align_items       : center 
-                }
 
-                select( cl('circle') ) => { 
+                select( cl('circle') ) => 
                     width             : 3rem 
                     height            : 3rem 
                     border_radius     : 3rem 
-                }
 
-                select( id('outer') ) => {
+                select( id('outer') ) => 
                     overflow          : hidden 
                     background_color  : yellow 
                     opacity           : 58% 
                     display           : flex 
                     justify_content   : end 
-                }
 
-                select( id('inner') ) => { 
+                select( id('inner') ) => 
                     width             : 0 
                     height            : 0 
                     margin_right      : -0.7rem 
                     margin_top        : -0.4rem 
                     background_color  : black 
-                }
 
-                select( id('sky') ) => {
+                select( id('sky') ) => 
                     animation         : ( light , 7s , infinite )
-                }
 
                 select(
                      id( 'sky' )
                          .id( 'outer' ) 
-                ) => { 
+                ) => 
                     animation : ( 'sunset', 7s,  infinite )
-                }
+
 
                 select(
                     id('sky')
                         .id('state')
                             .id('night')
-                ) => { 
+                ) => 
                     animation : ( 'night', 7s,  infinite )
-                }
 
                 select(
                     id('sky')
                         .id('outer')
                             .id('inner') 
-                ) => {
+                ) => 
                     animation : ( 'moonrise', 7s, infinite )
-                }
 
-                keyframes('night') => {                      
-                      at(0%)   => { color    : lightskyblue }
-                      at(50%)  => { color    : white        }
-                      at(100%) => { color    : lightskyblue }
-                }
+                keyframes('night') =>    
+                      at(0%)   => color    : lightskyblue
+                      at(50%)  => color    : white        
+                      at(100%) => color    : lightskyblue 
 
-                keyframes('light') => {
-                      at(0%)   => { background_color : lightskyblue }
-                      at(10%)  => { background_color : lightskyblue }
-                      at(30%)  => { background_color : black        }
-                      at(50%)  => { background_color : black        }
-                      at(60%)  => { background_color : black        }
-                      at(70%)  => { background_color : lightskyblue }
-                      at(100%) => { background_color : lightskyblue }
-                }
+                keyframes('light') =>
+                      at(0%)   => background_color : lightskyblue 
+                      at(10%)  => background_color : lightskyblue 
+                      at(30%)  => background_color : black        
+                      at(50%)  => background_color : black        
+                      at(60%)  => background_color : black        
+                      at(70%)  => background_color : lightskyblue 
+                      at(100%) => background_color : lightskyblue 
 
-                keyframes('moonrise') => { 
-                    at(0%)     => { height( 0 )    ; width( 0 )    ; background_color( lightskyblue ) }
-                    at(50%)    => { height( 3rem ) ; width( 3rem ) ; background_color( black )        }
-                    at(100%)   => { height( 0 )    ; width( 0 )    ; background_color( lightskyblue ) }
-                }
+                keyframes('moonrise') => 
+                    at(0%)     => height( 0 )    ; width( 0 )    ; background_color( lightskyblue ) 
+                    at(50%)    => height( 3rem ) ; width( 3rem ) ; background_color( black )        
+                    at(100%)   => height( 0 )    ; width( 0 )    ; background_color( lightskyblue )                
 
-                keyframes('sunset') => {
-                     at(0%)   => { transform        : translateX( 0% )    }
-                     at(10%)  => { background_color : yellow              }
-                     at(20%)  => { background_color : orange              }
-                     at(30%)  => { background_color : yellow              }
-                     at(50%)  => { transform        : translateX( -235% ) }
-                     at(60%)  => { background_color : yellow              }
-                     at(70%)  => { background_color : orange              }
-                     at(80%)  => { background_color : yellow              }
-                     at(100%) => { transform        : translateX( 0% )    }
-                 }
-            }
-        }
-        body() => {
-            div() => {
-                div('sky') => {
-                    div('state') => {
-                        div('day')    => { text( 'Good Day'   ) }
-                        div('night')  => { text( 'Good Night' ) } 
-                    }
-                    div('outer') => { 
+                keyframes('sunset') => 
+                     at(0%)   => transform        : translateX( 0% )   
+                     at(10%)  => background_color : yellow              
+                     at(20%)  => background_color : orange              
+                     at(30%)  => background_color : yellow              
+                     at(50%)  => transform        : translateX( -235% ) 
+                     at(60%)  => background_color : yellow              
+                     at(70%)  => background_color : orange              
+                     at(80%)  => background_color : yellow              
+                     at(100%) => transform        : translateX( 0% ) 
+                 --
+            --
+        --
+        body => 
+            div => 
+                div('sky') => 
+                    div('state') => 
+                        div('day')    => .text( 'Good Day'   ) 
+                        div('night')  => .text( 'Good Night' ) 
+                    --
+                    div('outer') =>  
                         cl('circle')
                         cl('center')
-                        div('inner') => { cl('circle') }
-                    }
-                }
-            }
-        }
-    }
-}
+                        div('inner') => .cl('circle')
+                    --
+                --
+            --
+        --
+    --
+--
 
-fn id    ( v: str ) { CSSPath.new( '#' ++ v )    }
-fn cl    ( v: str ) { CSSPath.new( '.' ++ v )    }
-fn tag   ( v: str ) { CSSPath.new( v )           }
-fn html             { Html.new()                 }
+type HtmlTag                        :  html | body | head 
+type AlignItems                     : center 
+type AnimationIterationCount        : infinite 
+type BorderStyle                    : ridge 
+type Color                          : lightskyblue | yellow | black 
+type Dispaly                        : flex 
+type JustifyContent                 : center | end | space_between 
+type Overflow                       : hidden 
+type Position                       : absolute 
+type CSSRule                        : Select(_) | KeyFrame(_) 
 
-enum HtmlTag                        { html , body , head }
-enum AlignItems                     { center }
-enum AnimationIterationCount        { infinite }
-enum BorderStyle                    { ridge }
-enum Color                          { lightskyblue , yellow , black }
-enum Dispaly                        { flex }
-enum JustifyContent                 { center , end , space_between }
-enum Overflow                       { hidden }
-enum Position                       { absolute }
-enum CSSRule                        { Select(_) , KeyFrame(_) }
-
-struct Html      { _head : Head  , _body : Body       } 
-struct Head      { styles : [Style]                   }
-struct Style     { rules : [ CSSRule ]                }  
-struct CSSPath   { path: str                          } 
-struct Animation { 
+type WebPage   (                                    )
+type Html      ( _head : Head  , _body : Body       ) 
+type Head      ( styles : [Style]                   )
+type Style     ( rules : [ CSSRule ]                )  
+type CSSPath   ( path: str                          ) 
+type Animation ( 
     name                        : str
     animation_duration          : num{s}
     animation_iteration_count   : AnimationIterationCount
-}
+)
 
-struct Border { 
+type Border (
     border_width: num 
     border_style: BorderStyle 
-}
+)
 
-struct Select             { paths : [ CSSPath ] , (props) : CSSProperties           }
-struct KeyFrameOffset     { offset : num ,        (props) : CSSProperties           }
-struct KeyFrame           { id : str , offsets : [KeyFrameOffset]                   } 
-struct Body               { els: [HtmlElement]                                      } 
-struct Text               { v: str                                                  }
-struct Div                { id: str , classes : [str] , children: [HtmlElement]     }
+type Select             ( paths : [ CSSPath ] , (props) : CSSProperties           )
+type KeyFrameOffset     ( offset : num ,        (props) : CSSProperties           )
+type KeyFrame           ( id : str , offsets : [KeyFrameOffset]                   ) 
+type Body               ( els: [HtmlElement]                                      ) 
+type Text               ( v: str                                                  )
+type Div                ( id: str , classes : [str] , children: [HtmlElement]     )
 
-struct CSSProperties {
+type CSSProperties (
     align_items        : AlignItems? 
     animation          : AnimationIterationCount?
     background_color   : Color? 
@@ -218,55 +199,72 @@ struct CSSProperties {
     user_select        : none  
     webkit_user_select : none              -- Safari 
     width              : num 
-}
+)
+
+:: (WebPage) str 
+[+] id  v = CSSPath.new( '#' ++ v )  
+
+:: (WebPage) str 
+[+] cl v = CSSPath.new( '.' ++ v )   
+
+:: (WebPage) str 
+[+] tag v = CSSPath.new( v )    
+
+:: (WebPage) str 
+[+] html = Html.new
+
+:: (Html) 
+[+] head = 
+	_head = Head.new
+	_head 
+
+:: (Html) 
+body = 
+	_body = Body.new 
+	_body 
 
 
-@ Html {
-    [+] fn head { _head = .new() ; _head }
-    [+] fn body { _body = .new() ; _body }
-}
-
-@ Head 
-[+] fn style { 
-    let s = Style.new() 
+:: (Head) 
+style = 
+    let s = Style.new
     styles ++ s 
     s  
-}
 
-@ Style {
-    [+] fn select( paths: CSSPath... ) { 
-            let s = Select.new( path )
-            rules ++ Select( s )
-            return s
-        }
-    [+] fn keyframes ( id ) {
-             let k = KeyFrame.{id} 
-             rules ++ KeyFrame(k)
-             return k  
-        }
-}
+:: (Style)  CSSPath...
+[+] select paths =   
+	let s = Select.new( path )
+	rules ++ Select( s )
+	return s
 
-@ CSSPath {
-    [+] fn id        ( v: str ) { append( '#' ++ v ) }
-    [+] fn cl        ( v: str ) { append( '.' ++ v ) }
-    [+] fn tag       ( v: str ) { append( v )        }
+:: (Style)  
+[+] keyframes id  =
+	let k = KeyFrame => id : id
+	rules ++ KeyFrame(k)
+	k  
 
-    fn append    ( v : str ){ path ++= '>' ++ v  }
-}
+:: (CSSPath) str 
+[+] id v = append( '#' ++ v ) 
 
-@ KeyFrame 
-[+] fn at(offset) { 
-    KeyFrameOffset.new( offset )
-}
+:: (CSSPath) str 
+[+] cl  v = append( '.' ++ v ) 
 
-@ Body  
-[+] fn div(id) { 
+:: (CSSPath) str 
+[+] tag v = append( v ) 
+
+:: (CSSPath)  str 
+append v = path ++= '>' ++ v 
+
+:: (KeyFrame ) 
+[+] at offset  = KeyFrameOffset.new( offset )
+
+:: (Body) 
+[+] div id =
     let _div = Div.new(id)
     children ++ Div(_div)
     el 
-} 
 
-@ Div {
-    [+] fn cl    (name)     { classes ++ name }
-    [+] fn text  (v)        { children ++ Text.new(v) }
-}`
+:: (Div) 
+[+] cl name = classes ++ name 
+
+:: (Div) 
+[+] text v = children ++ Text.new(v)`
