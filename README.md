@@ -1,9 +1,9 @@
-<!--
+
  [Website]: https://seenlang.org/
 [الموقع]: https://seenlang.org/ar
 
 
--->
+
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="readme/dark-banner.svg">
