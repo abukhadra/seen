@@ -1,6 +1,7 @@
 
- [Website]: https://seenlang.org/
+ <!--- [Website]: https://seenlang.org/
 [الموقع]: https://seenlang.org/ar
+--->
 
 
 
