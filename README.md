@@ -1,5 +1,5 @@
-[Website]: https://seenlang.org/
-[الموقع]: https://seenlang.org/ar
+<!-- [Website]: https://seenlang.org/
+[الموقع]: https://seenlang.org/ar-->
 
 
 <div align="center">
