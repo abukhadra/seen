@@ -7,8 +7,6 @@
     <source media="(prefers-color-scheme: light)" srcset="readme/light-banner.svg">
     <img alt="The Seen Programming Language - لفة البرمجة س" src="readme/light-banner.svg" width="100%">
   </picture>
-
-  <!-- [Website] &nbsp; &nbsp; &nbsp;|&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [الموقع] -->
 </div>
 <br>
 
